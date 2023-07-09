@@ -1,0 +1,49 @@
+.header {
+  height: 6rem;
+  background-color: $color-white;
+  padding: 0 3rem;
+  font-size: 1.8rem;
+  box-shadow: 0px 0px 0.9rem 2px rgba(0, 0, 0, 0.3);
+
+  &__nav {
+    @include flex(space-between);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    nav {
+      @include flex(space-between);
+    }
+
+    &-1 {
+      @include flex(space-between);
+      width: fit-content;
+
+      ul {
+        @include flex(space-between);
+        width: fit-content;
+
+        > :nth-child(-n + 2) {
+          margin-right: 2.5rem;
+        }
+      }
+    }
+
+    &-2 {
+      ul {
+        @include flex(space-between);
+        width: fit-content;
+        > :nth-child(-n + 1) {
+          margin-right: 2.5rem;
+        }
+      }
+    }
+  }
+}
+
+.logo {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 3rem;
+}
