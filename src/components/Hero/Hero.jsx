@@ -1,15 +1,16 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import "./hero.scss";
 
 export default function Hero() {
+  const canvasRef = useRef(null);
   useEffect(() => {
-    const canvas = document.getElementById("watch");
+    const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
-
-    // number of images tto be sequenced
+    
+    // number of images to be sequenced
     const frameCount = 147;
 
-    // For some weird reason i don not want to fucking know,
+    // For some weird reason I hdo not want to fucking know,
     // it only works with a padstart of 3
     const currentFrame = (index) => {
       return `/src/assets/xioami-watch-3-hero-asset/Home_${index
@@ -76,12 +77,11 @@ export default function Hero() {
         height={window.innerHeight}
         data-pin-scroll
         className="heroWrap_canvas"
+        ref={canvasRef}
         id="watch"
       ></canvas>
 
-      <div className="hero__text">
-        <h1 className="big">A Timepiece Paragon</h1>
-      </div>
+      <div className="hero__text"></div>
     </div>
   );
 }

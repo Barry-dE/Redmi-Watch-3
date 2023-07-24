@@ -1,41 +1,32 @@
 import "./watch.scss";
-import image_1 from "/src/assets/asset-1.jpg";
-import image_2 from "/src/assets/asset-3.jpg";
-import image_3 from "/src/assets/asset-2.jpg";
-import image_4 from "/src/assets/asset-10.jpg";
-
+import video from "../../assets/video-1.mp4";
 export default function Watch() {
   return (
-    <div className="wrap">
-      <div className="wrap__grid">
-        <div className="wrap__grid-1">
-          <div className="wrap__grid-1-1">
-            <h1>A perfect match for sports</h1>
-          </div>
-          <div className="wrap__grid-1-2">
-            <img src={image_1} alt="" />
-          </div>
-          <div className="wrap__grid-1-3">
-            <img src={image_2} alt="" />
-            <p data-animation="paragraph">
-              Light-weighted all around comfortable for all-day <br />
-              wearing
-            </p>
+    <div className="wrapper">
+      <div className="wrapper__content">
+        <div className="wrapper__content-1">
+          <div>
+            <video autoPlay muted loop>
+              <source src={video} />
+            </video>
           </div>
         </div>
-        <div className="wrap__grid-2">
-          <div className="wrap__grid-2-1">
-            <img src={image_4} alt="" />
-            <p data-animation="paragraph">
-              Ultra large and clear 1.75 inch display easy to view even in
-              strong sunlight
+        <div className="wrapper__content-2">
+          <div>
+            <h1>
+              Young, <br /> stylish, <br /> fashionable
+            </h1>
+          </div>
+        </div>
+        <div className="wrapper__content-3">
+          <div>
+            <p>
+              Design with the innovative position memory loop. Redmi Watch 3
+              comes in with 2 in-box options: black and ivory and more strap
+              colors. The strap has an innovative position memory loop on the
+              strap. After you select a hole for the first wearing, it will be
+              remembered and you can wear the watch more easily in the future.
             </p>
-          </div>
-          <div className="wrap__grid-2-2">
-            <img src={image_3} alt="" />
-          </div>
-          <div className="wrap__grid-2-3">
-            <h1>Young, stylish, fashionable</h1>
           </div>
         </div>
       </div>

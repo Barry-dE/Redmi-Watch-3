@@ -1,82 +1,56 @@
-.wrap {
-  background-color: $color-white;
-
-  &__grid {
-    color: $color-black;
-    padding: 8rem 8rem;
-    height: 100%;
+.wrapper {
+  height: auto;
+  &__content {
+    height: auto;
+    padding-top: 10rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    width: 100%;
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    gap: 9rem;
-    background-color: $color-white;
-
+    grid-gap: 4rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr, auto;
+    line-height: 1.1;
     &-1 {
-      @include grid;
+      background-color: #161515;
+      height: 55rem;
+      width: 100%;
+      grid-column: 1/ -1;
 
-      &-1 {
-        h1 {
-          font-size: 5rem;
-          line-height: 1.1;
-          @include centre;
-        }
-      }
-      &-2 {
+      div {
+        position: relative;
+        width: 100%;
+        height: 100%;
         overflow: hidden;
-        img {
-          @include img-fit(cover);
-        }
-      }
-      &-3 {
-        overflow: hidden;
-        padding-bottom: 4rem;
-        @include flex(space-between);
-        flex-direction: column;
-        line-height: 1.1;
-        img {
-          @include img-fit(contain);
-        }
 
-        p {
-          font-size: 2rem;
-          font-weight: 400;
-          font-size: 1.9rem;
-          line-height: 1.1;
+        video {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
       }
     }
 
     &-2 {
-      @include grid;
-
-      &-1 {
-        @include flex(space-between);
-        flex-direction: column;
-
-        img {
-          @include img-fit(cover);
-        }
-
-        p {
-          font-size: 2rem;
-          font-weight: 400;
-          line-height: 1.1;
-        }
+      grid-column: span 2;
+      height: 40rem;
+      width: 100%;
+      text-align: center;
+      padding: 4rem;
+      div {
+        font-size: 3rem;
       }
-      &-2 {
-        overflow: hidden;
+    }
 
-        img {
-          @include img-fit(cover);
-        }
-      }
-      &-3 {
-        h1 {
-          font-size: 5rem;
-          text-align: center;
-          line-height: 1.1;
-          @include centre;
-        }
-      }
+    &-3 {
+      grid-column: span 2;
+      height: 40rem;
+      padding: 4rem;
+      font-size: 2.5rem;
+      font-weight: 400;
     }
   }
 }
