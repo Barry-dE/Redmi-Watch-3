@@ -1,0 +1,42 @@
+.design {
+      @extend %dimension;
+}
+
+.design__wrapper {
+      @extend %dimension;
+      padding: 8rem auto;
+}
+
+.design__content {
+}
+
+.design__media {
+      width: 75rem;
+      height: 40rem;
+      position: relative;
+      margin: 0 auto;
+      margin-top: 8rem;
+}
+
+.design__media__video {
+      @extend %cover;
+      object-fit: cover;
+}
+
+.design__text__wrapper {
+      margin-top: 6rem;
+      margin-bottom: 15rem;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 8rem;
+}
+
+.design__text {
+      font-size: 5rem;
+      max-width: 34rem;
+}
+
+.design__text__description {
+      max-width: 30rem;
+      @extend %description-14;
+}

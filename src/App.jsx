@@ -1,24 +1,21 @@
 import { useEffect } from "react";
-import Header from "./components/Header/Header";
-import Hero from "./components/Hero/Hero";
-import scroll from "./animation/smoothScroll";
-import split from "./animation/textAnim";
-import Watch from "./components/Watch/Watch";
-
-scroll();
+import Hero from "./ui/Hero";
+import Watch from "./ui/Watch";
+import Entry from "./app/index";
+import Health from "./ui/health";
 
 function App() {
-  useEffect(() => {
-    split();
-  }, []);
+      useEffect(() => {
+            new Entry();
+      }, []);
 
-  return (
-    <>
-      <Header />
-      <Hero />
-      <Watch />
-    </>
-  );
+      return (
+            <main>
+                  <Hero />
+                  <Watch />
+                  <Health />
+            </main>
+      );
 }
 
 export default App;

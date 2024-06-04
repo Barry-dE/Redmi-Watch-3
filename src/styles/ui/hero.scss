@@ -1,0 +1,64 @@
+.hero {
+      width: 100%;
+      height: 500vh;
+      position: relative;
+
+      &__text {
+            position: absolute;
+            top: 11.6%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: $color-white;
+
+            &__title {
+                  font-size: 4rem;
+                  text-align: center;
+                  line-height: 1.2;
+                  text-transform: uppercase;
+                  position: relative;
+            }
+      }
+
+      &__sticky {
+            z-index: 20;
+            transition: 1s ease-out;
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 4rem;
+            background-color: rgba($color-black, 0.8);
+            width: 100%;
+            padding: 0 2rem;
+            @include flex(space-between, _);
+
+            &--product {
+                  width: 100%;
+                  @include flex(space-between, _);
+                  font-size: 1.3rem;
+                  span {
+                        font-weight: 700;
+                  }
+
+                  ul {
+                        @include flex(space-between, _);
+                        width: fit-content;
+                        > :nth-child(-n + 1) {
+                              margin-right: 2.5rem;
+                        }
+                  }
+            }
+      }
+
+      canvas {
+            @extend %canvas;
+      }
+}
+
+.bold {
+      font-size: 1.8rem;
+}
+
+.fixed {
+      position: sticky;
+      top: 0;
+}

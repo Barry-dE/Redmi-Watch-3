@@ -1,0 +1,71 @@
+.health {
+      width: 100%;
+      height: 100%;
+}
+
+.health__wrapper {
+      margin-bottom: 10rem;
+      margin-top: 8rem;
+}
+
+.health__content {
+      display: flex;
+      flex-direction: column;
+}
+
+.health__text__title {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      align-self: flex-start;
+      border: 1px dashed $color-white;
+      padding: 1rem 2rem;
+      border-radius: 10rem;
+      color: $color-pink;
+}
+
+.health__content__content {
+      padding: 0 2rem;
+}
+
+.health__medias__wrapper {
+      display: flex;
+      gap: 2rem;
+}
+
+.health__medias {
+}
+
+.health__media {
+      height: 20rem;
+      width: 30rem;
+      position: relative;
+      margin-bottom: 7rem;
+}
+
+.health__media__image {
+      @extend %cover;
+      object-fit: cover;
+      border-radius: 0.5rem;
+}
+
+.health__text {
+      margin-bottom: 10rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+}
+
+.health__description {
+      max-width: 30rem;
+      @extend %description-14;
+}
+
+.health__article {
+      flex-direction: column;
+      align-self: flex-end;
+
+      & :not(:last-child) {
+            margin-bottom: 3rem;
+      }
+}
